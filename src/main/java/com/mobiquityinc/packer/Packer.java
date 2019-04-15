@@ -13,15 +13,6 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Packer {
 
-    public static void main(String... args) {
-        try {
-            String result = Packer.pack("C:\\GitHub\\data.txt");
-            System.out.println(result);
-        } catch (APIException e) {
-            e.printStackTrace();
-        }
-    }
-
     public static Injector injector = Guice.createInjector(new PackerModule());
 
     public static String pack(String filePath) throws APIException {
